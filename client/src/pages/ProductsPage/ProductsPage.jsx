@@ -4,6 +4,8 @@ import ProductList from "../../components/ProductList/ProductList";
 import ProductModal from "../../components/ProductModal/ProductModal";
 import { api } from "../../api";
 
+
+
 export default function ProductsPage() {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -28,6 +30,7 @@ export default function ProductsPage() {
         }
     };
 
+
     const openCreate = () => {
         setModalMode("create");
         setEditingProduct(null);
@@ -39,7 +42,6 @@ export default function ProductsPage() {
         setEditingProduct(product);
         setModalOpen(true);
     };
-
     const closeModal = () => {
         setModalOpen(false);
         setEditingProduct(null);
@@ -74,6 +76,7 @@ export default function ProductsPage() {
             alert("Ошибка сохранения товара");
         }
     };
+
 
     return (
         <div className="page">

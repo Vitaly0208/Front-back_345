@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ProductCard({ product, onEdit, onDelete }) {
     return (
-        <div className="userRow"> {/* Используем классы из методички для стиля */}
+        <div className="userRow">
             <div className="userMain">
                 <div className="userId">#{product.id}</div>
                 <div className="userName">{product.name}</div>

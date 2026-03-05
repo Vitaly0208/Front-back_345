@@ -19,7 +19,6 @@ export default function ProductModal({ open, mode, initialProduct, onClose, onSu
     if (!open) return null;
 
     const title = mode === "edit" ? "Редактирование товара" : "Новый товар";
-
     const handleSubmit = (e) => {
         e.preventDefault();
         if (!name.trim()) { alert("Введите название"); return; }
@@ -34,6 +33,7 @@ export default function ProductModal({ open, mode, initialProduct, onClose, onSu
             stock: Number(stock),
         });
     };
+
 
     return (
         <div className="backdrop" onMouseDown={onClose}>
